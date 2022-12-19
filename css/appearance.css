@@ -2,7 +2,7 @@
 
 /* ==== STYLE WHOLE PAGE ==== */
 *{
-    font-family: Inter,sans-serif;
+    font-family: Inter,sans-serif !important;
 }
 html{
     background-color:#121212;
@@ -10,7 +10,7 @@ html{
 
 /* ==== INPUTS ==== */
 #user-input{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 48px;
     letter-spacing: 0em;
@@ -37,7 +37,7 @@ html{
 button{
     display:inline-block;
     border: 0.1em solid #FFFFFF;
-    border-radius: 0.12em;
+    border-radius: 0.3em;
     text-decoration: none;
     font-weight: bold;
     color: #FFFFFF;
@@ -47,6 +47,24 @@ button{
 }
 
 button:hover {
-    color: #000000;
+    color:#03002e;
     background-color: #FFFFFF;
+}
+#copy-button{
+    color: #03002e;
+    border: 0.15em solid #03002e;
+}
+
+/* ==== RESULT ==== */
+#result{
+    background-color: white;
+    border-radius:10px;
+}
+#result-message{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#03002e;
 }
