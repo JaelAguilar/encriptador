@@ -36,9 +36,7 @@ html{
 /* Button appearance obtained from https://fdossena.com/?p=html5cool/buttons/i.frag */
 button{
     display:inline-block;
-    padding:0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
-    margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
     text-decoration: none;
     font-weight: bold;
@@ -51,11 +49,4 @@ button{
 button:hover {
     color: #000000;
     background-color: #FFFFFF;
-}
-
-@media all and (max-width:30em) {
-    button {
-        display: block;
-        margin: 0.4em auto;
-    }
 }
