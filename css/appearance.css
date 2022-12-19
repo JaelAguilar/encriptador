@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-/* ==== INPUT ==== */
-#user-input{
+/* ==== STYLE WHOLE PAGE ==== */
+*{
     font-family: Inter,sans-serif;
+}
+html{
+    background-color:#121212;
+}
+
+/* ==== INPUTS ==== */
+#user-input{
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
     letter-spacing: 0em;
     text-align: left;
+    background: none;
+    color:white;
 }
+
 
 /* Scrollbar appearance obtained from https://github.com/downthecrop/minimal-scrollbar project*/
 #user-input::-webkit-scrollbar{
@@ -21,4 +31,31 @@
 #user-input::-webkit-scrollbar-thumb {
     background-color: #cfc9c5;
     border-radius: 50%/.7%;
+}
+
+/* Button appearance obtained from https://fdossena.com/?p=html5cool/buttons/i.frag */
+button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    background:none;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    button {
+        display: block;
+        margin: 0.4em auto;
+    }
 }
