@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-
+/* ==== INPUT ==== */
 #user-input{
     font-family: Inter,sans-serif;
     font-size: 32px;
@@ -8,4 +8,17 @@
     line-height: 48px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+/* Scrollbar appearance obtained from https://github.com/downthecrop/minimal-scrollbar project*/
+#user-input::-webkit-scrollbar{
+    width:5px;
+    height:5px
+}
+#user-input::-webkit-scrollbar-track{
+     background: none
+}
+#user-input::-webkit-scrollbar-thumb {
+    background-color: #cfc9c5;
+    border-radius: 50%/.7%;
 }
