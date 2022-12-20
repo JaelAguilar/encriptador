@@ -21,8 +21,25 @@
 
     /* ==== HEADER ==== */
     header{
-        padding-right:30px;
+        padding-right:40px;
+        padding-left:10px;
     }
+    /* ==== FORM ==== */
+    form{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        padding-right:40px;
+        padding-left:10px;
+        gap:20px;
+    }
+    #user-input{
+        height: 100%;
+    }
+    #buttons button{
+        width:100px;
+    }
+    
     /* ==== RESULT ==== */
     #result{
         display:flex;
