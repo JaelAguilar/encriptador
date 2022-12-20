@@ -55,6 +55,10 @@ button:hover {
     border: 0.15em solid #03002e;
 }
 
+/* ==== Little warning ==== */
+#warning{
+    color:#d9d9d9;
+}
 /* ==== RESULT ==== */
 #result{
     background-color: white;

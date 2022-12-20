@@ -17,12 +17,15 @@ header{
     border-radius:50%;
 }
 
-/* ==== USER INPUT ==== */
+/* ==== FORM ==== */
 form{
     margin:50px 0;
 }
 #user-input{
     width:100%;
+}
+#warning{
+    margin:20px 0;
 }
 
 /* ==== BUTTONS ==== */
