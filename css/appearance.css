@@ -68,3 +68,12 @@ button:hover {
     text-align: left;
     color:#03002e;
 }
+
+/* ==== FOOTER ==== */
+footer{
+    text-align: center;   
+    color:white;
+}
+footer a{
+    color:#cfc9c5
+}
