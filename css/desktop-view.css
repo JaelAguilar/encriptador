@@ -25,7 +25,7 @@
         padding-left:10px;
     }
     /* ==== FORM ==== */
-    form{
+    #form{
         display:flex;
         flex-direction:column;
         justify-content:space-between;
