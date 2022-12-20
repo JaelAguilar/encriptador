@@ -4,6 +4,7 @@ let decryptButton = document.querySelector('#decrypt-button');
 let userInput = document.querySelector('#user-input');
 let resultMessage = document.querySelector('#result-message');
 let copyButton = document.querySelector('#copy-button');
+let warningMessage = document.querySelectorAll('.warning');
 
 //Variable declaration
 let input;
@@ -29,10 +30,26 @@ function isValid(input) {
     if (input.toLowerCase() === input &&
         input != '' &&
         /[a-z .,:]+/.test(input)) {
+        changeWarning(true)
         return true;
     }
+    changeWarning(false)
     return false;
 }
+
+function changeWarning(test) {
+    if (test) {
+        for (const el of warningMessage) {
+            el.classList.remove('wrong');
+        }
+    }
+    else {
+        for (const el of warningMessage) {
+            el.classList.add('wrong');
+        }
+    }
+}
+
 // Asign functions
 encryptButton.onclick = () => {
     input = userInput.value;

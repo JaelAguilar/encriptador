@@ -58,7 +58,16 @@ button:hover {
 /* ==== Little warning ==== */
 #warning{
     color:#d9d9d9;
+    fill:#d9d9d9;
 }
+svg{
+    fill:#d9d9d9;
+}
+.wrong{
+    color:rgb(255, 133, 133);
+    fill:rgb(255, 133, 133);
+}
+
 /* ==== RESULT ==== */
 #result{
     background-color: white;
