@@ -38,12 +38,12 @@ button{
 }
 /* ==== RESULT ==== */
 #result{
-    width:100%;
     padding:10px;
     display:flex;
     justify-content:center;
     flex-direction:column;
     display:none;
+    gap:10px;
 }
 #result-message{
     width:100%;
