@@ -8,10 +8,10 @@
         grid-area:1/1/1/1;
     }
     #result{
-        grid-area:1/2/-2/-1;
+        grid-area:1/2/-1/-1;
         display:block;
     }
     footer{
-        grid-area:-2/1/-1/-1;
+        grid-area:-2/1/-1/-2;
     }
 }
