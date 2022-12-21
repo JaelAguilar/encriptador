@@ -31,6 +31,7 @@ function encrypt(input) {
         result += Object.keys(keys).includes(input[i]) ? keys[input[i]] : input[i];
     }
     resultMessage.innerHTML = result;
+    copyButton.textContent = 'Copy';
 }
 
 /**
@@ -49,6 +50,7 @@ function decrypt(input) {
         }
     } 
     resultMessage.innerHTML = result;
+    copyButton.textContent = 'Copy';
 }
 
 /**
@@ -101,10 +103,10 @@ function showResultOnMobile() {
  */
 const copyMessage = async () => {
     try {
-      await navigator.clipboard.writeText(resultMessage.textContent);
-      console.log('Content copied to clipboard');
+        await navigator.clipboard.writeText(resultMessage.textContent);
+        copyButton.textContent = 'Copied';
     } catch (err) {
-      console.error('Failed to copy: ', err);
+        copyButton.textContent = 'Error';
     }
 }
   
