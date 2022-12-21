@@ -25,6 +25,17 @@ function encrypt(input) {
     }
     resultMessage.innerText = result;
 }
+function decrypt(input) {
+    let length = input.length;
+    let result = '';
+    for (i = 0; i < length; i++){
+        result += input[i];
+        if (Object.keys(keys).includes(input[i])) {
+            i += keys[input[i]].length - 1;
+        }
+    } 
+    resultMessage.innerText = result;
+}
 
 function isValid(input) {
     if (input.toLowerCase() === input &&
@@ -54,6 +65,13 @@ function changeWarning(test) {
 encryptButton.onclick = () => {
     input = userInput.value;
     if (isValid(input)) {
-        encrypt(input)
+        encrypt(input);
+    }
+}
+
+decryptButton.onclick = () => {
+    input = userInput.value;
+    if (isValid(input)) {
+        decrypt(input);
     }
 }
