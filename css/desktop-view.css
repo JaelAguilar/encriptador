@@ -39,12 +39,26 @@
     #buttons button{
         width:100px;
     }
+    #copy-button{
+        width:100px;
+        justify-self:center;
+    }
     
     /* ==== RESULT ==== */
-    #result{
-        display:flex;
-        flex-direction: column;
-        justify-content:space-between;
+    #result,#result.visible{
+        display:grid;
+        grid-template: 1fr 40px/1fr;
         padding:30px 20px;
+        margin:0;
+    }
+    #result-message{
+        display:grid;
+        text-align: left;
+        width:100%;
+    }
+    #result img{
+        display:block;
+        width:100%;
+        align-self:center;
     }
 }
