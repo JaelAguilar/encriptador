@@ -85,6 +85,10 @@ function changeWarning(test) {
     }
 }
 
+/**
+ * Shows result the first time the user makes a query
+ *
+ */
 function showResultOnMobile() {
     resultBox.classList.add('visible');
 }
