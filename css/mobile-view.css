@@ -19,7 +19,8 @@ header{
 
 /* ==== FORM ==== */
 #form{
-    margin:50px 0;
+    margin-top:40px;
+    margin-bottom:30px;
 }
 #user-input{
     width:100%;
@@ -41,12 +42,15 @@ button{
 }
 /* ==== RESULT ==== */
 #result{
-    padding:10px;
-    display:flex;
+    padding:20px;
     justify-content:center;
     flex-direction:column;
     display:none;
     gap:10px;
+    margin-bottom: 30px;
+}
+#result.visible{
+    display:flex;
 }
 #result-message{
     width:100%;

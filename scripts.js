@@ -5,6 +5,7 @@ let userInput = document.querySelector('#user-input');
 let resultMessage = document.querySelector('#result-message');
 let copyButton = document.querySelector('#copy-button');
 let warningMessage = document.querySelectorAll('.warning');
+let resultBox = document.querySelector('#result');
 
 //Variable declaration
 let input;
@@ -84,11 +85,16 @@ function changeWarning(test) {
     }
 }
 
+function showResultOnMobile() {
+    resultBox.classList.add('visible');
+}
+
 // Asign functions
 encryptButton.onclick = () => {
     input = userInput.value;
     if (isValid(input)) {
         encrypt(input);
+        showResultOnMobile();
     }
 }
 
@@ -96,5 +102,6 @@ decryptButton.onclick = () => {
     input = userInput.value;
     if (isValid(input)) {
         decrypt(input);
+        showResultOnMobile();
     }
 }
