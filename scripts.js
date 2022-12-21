@@ -17,6 +17,12 @@ const keys = {
 }
 
 // Functions
+
+/**
+ * Encrypts the input by changing all vowels with the specific key value.
+ *
+ * @param {String} input
+ */
 function encrypt(input) {
     let length = input.length;
     let result=''
@@ -25,6 +31,12 @@ function encrypt(input) {
     }
     resultMessage.innerText = result;
 }
+
+/**
+ *Decrypts the input by removing the last elements of the keys, leaving only vowels
+ *
+ * @param {String} input
+ */
 function decrypt(input) {
     let length = input.length;
     let result = '';
@@ -37,6 +49,12 @@ function decrypt(input) {
     resultMessage.innerText = result;
 }
 
+/**
+ * Checks if the input is in lowercase, contains only letters or specific symbols and is not empty
+ *
+ * @param {String} input
+ * @return {Bool} True if valid, else False
+ */
 function isValid(input) {
     if (input.toLowerCase() === input &&
         input != '' &&
@@ -48,6 +66,11 @@ function isValid(input) {
     return false;
 }
 
+/**
+ * Changes the color of the little warning message if Input is not valid
+ *
+ * @param {String} test
+ */
 function changeWarning(test) {
     if (test) {
         for (const el of warningMessage) {
