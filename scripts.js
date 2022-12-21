@@ -30,7 +30,7 @@ function encrypt(input) {
     for (i = 0; i < length; i++){
         result += Object.keys(keys).includes(input[i]) ? keys[input[i]] : input[i];
     }
-    resultMessage.innerText = result;
+    resultMessage.innerHTML = result;
 }
 
 /**
@@ -48,7 +48,7 @@ function decrypt(input) {
             i += keys[input[i]].length - 1;
         }
     } 
-    resultMessage.innerText = result;
+    resultMessage.innerHTML = result;
 }
 
 /**
