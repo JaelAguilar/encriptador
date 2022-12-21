@@ -93,6 +93,20 @@ function showResultOnMobile() {
     resultBox.classList.add('visible');
 }
 
+
+/**
+ * Asyncronous functions that copies the result in the clipboard
+ *
+ */
+const copyMessage = async () => {
+    try {
+      await navigator.clipboard.writeText(resultMessage.textContent);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+}
+  
 // Asign functions
 encryptButton.onclick = () => {
     input = userInput.value;
@@ -108,4 +122,8 @@ decryptButton.onclick = () => {
         decrypt(input);
         showResultOnMobile();
     }
+}
+
+copyButton.onclick = () => {
+    copyMessage()
 }
