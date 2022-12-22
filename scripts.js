@@ -31,6 +31,7 @@ function encrypt(input) {
         result += Object.keys(keys).includes(input[i]) ? keys[input[i]] : input[i];
     }
     resultMessage.innerHTML = result;
+    copyButton.textContent = 'Copy';
 }
 
 /**
@@ -39,16 +40,16 @@ function encrypt(input) {
  * @param {String} input
  */
 function decrypt(input) {
-    let length = input.length;
     let result = '';
-    for (i = 0; i < length; i++){
-        result += input[i];
-        if (Object.keys(keys).includes(input[i]) &&
-            input.indexOf(keys[input[i]])==i) {
-            i += keys[input[i]].length - 1;
+    while (input.length > 0) {
+        result += input[0];
+        if (Object.keys(keys).includes(input[0])) {
+            input = input.slice(keys[input[0]].length-1);
         }
-    } 
+        input = input.slice(1);
+    }
     resultMessage.innerHTML = result;
+    copyButton.textContent = 'Copy';
 }
 
 /**
@@ -101,10 +102,10 @@ function showResultOnMobile() {
  */
 const copyMessage = async () => {
     try {
-      await navigator.clipboard.writeText(resultMessage.textContent);
-      console.log('Content copied to clipboard');
+        await navigator.clipboard.writeText(resultMessage.textContent);
+        copyButton.textContent = 'Copied';
     } catch (err) {
-      console.error('Failed to copy: ', err);
+        copyButton.textContent = 'Error';
     }
 }
   
