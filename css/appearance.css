@@ -85,6 +85,8 @@ svg{
     letter-spacing: 0em;
     text-align: left;
     color:#03002e;
+    overflow-wrap: break-word;
+    display:inline-block;
 }
 
 /* ==== FOOTER ==== */

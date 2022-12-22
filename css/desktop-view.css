@@ -55,6 +55,7 @@
         display:grid;
         text-align: left;
         width:100%;
+        min-width:0;
     }
     #result img{
         display:block;
