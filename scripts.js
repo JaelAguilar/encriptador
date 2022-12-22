@@ -40,15 +40,14 @@ function encrypt(input) {
  * @param {String} input
  */
 function decrypt(input) {
-    let length = input.length;
     let result = '';
-    for (i = 0; i < length; i++){
-        result += input[i];
-        if (Object.keys(keys).includes(input[i]) &&
-            input.indexOf(keys[input[i]])==i) {
-            i += keys[input[i]].length - 1;
+    while (input.length > 0) {
+        result += input[0];
+        if (Object.keys(keys).includes(input[0])) {
+            input = input.slice(keys[input[0]].length-1);
         }
-    } 
+        input = input.slice(1);
+    }
     resultMessage.innerHTML = result;
     copyButton.textContent = 'Copy';
 }
