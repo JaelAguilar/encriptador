@@ -43,7 +43,8 @@ function decrypt(input) {
     let result = '';
     while (input.length > 0) {
         result += input[0];
-        if (Object.keys(keys).includes(input[0])) {
+        if (Object.keys(keys).includes(input[0]) &&
+            input.indexOf(keys[input[0]])==0) {
             input = input.slice(keys[input[0]].length-1);
         }
         input = input.slice(1);
